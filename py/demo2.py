@@ -1,13 +1,13 @@
 	
 def doGet(uri, queryString):
 
-	resultSet   = dbcon.prepareStatement("select * from navusret00 fetch first 10 rows only").executeQuery()
+	resultSet   = dbcon.prepareStatement("call microdemo.user_list (search => 'sen')").executeQuery()
 	
 	data = []
 	while resultSet.next():
 		data.append({
-			"usrid": resultSet.getString("usrid"), 
-			"usrnam": resultSet.getString("usrnam")
+			"id": resultSet.getString("user_id"), 
+			"name": resultSet.getString("name")
 		})
 	
-	return {"uri": uri, "queryString": queryString, "msg": "Hahaha", "data": data}
+	return {"uri": uri, "queryString": queryString, "data": data}
