@@ -3,6 +3,7 @@ package demo;
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.data.rest.webmvc.RepositoryLinksResource;
 import org.springframework.hateoas.ResourceProcessor;
@@ -27,18 +28,18 @@ public class UserController implements ResourceProcessor<RepositoryLinksResource
 	
 	@GetMapping("/{id}")
 	User getUser(@PathVariable("id") Long id) {
-		User u =  userRepository.findById(id).get();
-		return u;
+		Optional<User> p = userRepository.findById(id);
+		return (p == null) ? null:p.get();
 	}
 
-	@GetMapping("")
+	@GetMapping("/listbyview")
 	List<User> getUser(@RequestParam("search") String search) {
 		return  userRepository.findByNameIgnoreCaseContaining(search);
 	}
 
-	@GetMapping("/proclist")
-	List<User> getUser() {
-		return userRepository.procedureList();
+	@GetMapping("/listbyprocedure")
+	List<User> getUserByProc(@RequestParam("search") String search) {
+		return userRepository.listByProcedure(search);
 	}
 
 	@Override

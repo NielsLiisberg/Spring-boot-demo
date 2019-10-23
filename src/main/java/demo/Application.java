@@ -15,7 +15,7 @@ public class Application implements WebMvcConfigurer {
 	@Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		/* Setup static file mappings (Hives) */
-	    registry.addResourceHandler("/img/**").addResourceLocations("file:///users/ctu/Pictures/");
+	    // registry.addResourceHandler("/img/**").addResourceLocations("file:///users/ctu/Pictures/");
 	}
 
 }
