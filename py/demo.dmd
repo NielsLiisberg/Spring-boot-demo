@@ -1,0 +1,1999 @@
+{
+	"model": {
+		"proxy": {
+			"url": "/admin/services/ip2dmdProxy.aspx"
+		},
+
+		"entities": {
+			"clobs": {
+				"title": "Clob test",
+				"idColumn" : "id",
+				"columns": {
+					"id" : {
+						"title" : "Clob id",
+						"type"  : "int"
+					},
+					"text" : {
+						"title" : "Clob text",
+						"type"  : "clob"
+					} 
+				}
+			},
+			"Custbal": {
+				"temp": {
+					"newEntity": true
+				},
+				"title": "Customer Balances",
+				"file": "PORTFDEMO/CUSTBAL",
+				"primaryKey": [
+					"Custref"
+				],
+				"columns": {
+					"Custref": {
+						"title": "Customer Code",
+						"ccsid": 285,
+						"type": "char(10)"
+					},
+					"Balance": {
+						"title": "Current Balance",
+						"type": "decimal(9, 2)"
+					},
+					"Aged30": {
+						"title": "Aged 30 days",
+						"type": "decimal(9, 2)"
+					},
+					"Aged60": {
+						"title": "Aged 60 days",
+						"type": "decimal(9, 2)"
+					},
+					"Aged90": {
+						"title": "Aged 90 days",
+						"type": "decimal(9, 2)"
+					},
+					"Aged120": {
+						"title": "Aged 120+ days",
+						"type": "decimal(9, 2)"
+					}
+				},
+				"ui": {
+					"grids": {
+						"common": {
+							"columns": [
+								{
+									"name": "Custref"
+								},
+								{
+									"name": "Balance"
+								},
+								{
+									"name": "Aged30"
+								},
+								{
+									"name": "Aged60"
+								},
+								{
+									"name": "Aged90"
+								},
+								{
+									"name": "Aged120"
+								}
+							]
+						}
+					},
+					"forms": {
+						"common": {
+							"name": "form",
+							"border": false,
+							"labelWidth": 150,
+							"defaults": {
+								"labelWidth": 150
+							},
+							"items": {
+								"portlet1": {
+									"position": {
+										"row": 1,
+										"column": 1
+									},
+									"title": "Customer Code",
+									"type": "portlet",
+									"columns": [
+										{
+											"name": "Custref"
+										},
+										{
+											"name": "Balance"
+										},
+										{
+											"name": "Aged30"
+										},
+										{
+											"name": "Aged60"
+										},
+										{
+											"name": "Aged90"
+										},
+										{
+											"name": "Aged120"
+										}
+									]
+								}
+							},
+							"columns": [
+								{
+									"name": "Custref"
+								},
+								{
+									"name": "Balance"
+								},
+								{
+									"name": "Aged30"
+								},
+								{
+									"name": "Aged60"
+								},
+								{
+									"name": "Aged90"
+								},
+								{
+									"name": "Aged120"
+								}
+							]
+						}
+					}
+				},
+				"menuEntryPoint": false,
+				"designer": {
+					"x": 10,
+					"y": 10,
+					"width": 200,
+					"height": 133
+				},
+				"permission": {
+					"add": {
+						"form": true
+					},
+					"edit": {
+						"form": true,
+						"grid": false
+					},
+					"remove": {
+						"grid": true,
+						"form": true
+					}
+				},
+				"cid": "A"
+			},
+			"Salesdly": {
+				"temp": {
+					"newEntity": true
+				},
+				"title": "Sales Order Delivery Address",
+				"file": "PORTFDEMO/SALESDLY",
+				"primaryKey": [
+					"Orderref"
+				],
+				"columns": {
+					"Orderref": {
+						"title": "Order Number",
+						"ccsid": 285,
+						"type": "char(6)"
+					},
+					"Dlyaddr1": {
+						"title": "Delivery Address Lin",
+						"ccsid": 285,
+						"type": "char(40)"
+					},
+					"Dlyaddr2": {
+						"title": "Delivery Address Lin",
+						"ccsid": 285,
+						"type": "char(40)"
+					},
+					"Dlyaddr3": {
+						"title": "Delivery Address Lin",
+						"ccsid": 285,
+						"type": "char(40)"
+					},
+					"Dlyaddr4": {
+						"title": "Delivery Address Lin",
+						"ccsid": 285,
+						"type": "char(40)"
+					},
+					"Dlypost": {
+						"title": "Delivery Postcode",
+						"ccsid": 285,
+						"type": "char(10)"
+					}
+				},
+				"ui": {
+					"grids": {
+						"common": {
+							"columns": [
+								{
+									"name": "Orderref"
+								},
+								{
+									"name": "Dlyaddr1"
+								},
+								{
+									"name": "Dlyaddr2"
+								},
+								{
+									"name": "Dlyaddr3"
+								},
+								{
+									"name": "Dlyaddr4"
+								},
+								{
+									"name": "Dlypost"
+								}
+							]
+						}
+					},
+					"forms": {
+						"common": {
+							"name": "form",
+							"border": false,
+							"labelWidth": 150,
+							"defaults": {
+								"labelWidth": 150
+							},
+							"items": {
+								"portlet1": {
+									"position": {
+										"row": 1,
+										"column": 1
+									},
+									"title": "Order Number",
+									"type": "portlet",
+									"columns": [
+										{
+											"name": "Orderref"
+										},
+										{
+											"name": "Dlyaddr1"
+										},
+										{
+											"name": "Dlyaddr2"
+										},
+										{
+											"name": "Dlyaddr3"
+										},
+										{
+											"name": "Dlyaddr4"
+										},
+										{
+											"name": "Dlypost"
+										}
+									]
+								}
+							},
+							"columns": [
+								{
+									"name": "Orderref"
+								},
+								{
+									"name": "Dlyaddr1"
+								},
+								{
+									"name": "Dlyaddr2"
+								},
+								{
+									"name": "Dlyaddr3"
+								},
+								{
+									"name": "Dlyaddr4"
+								},
+								{
+									"name": "Dlypost"
+								}
+							]
+						}
+					}
+				},
+				"menuEntryPoint": false,
+				"designer": {
+					"x": 670,
+					"y": 10,
+					"width": 200,
+					"height": 130
+				},
+				"permission": {
+					"add": {
+						"form": true
+					},
+					"edit": {
+						"form": true,
+						"grid": false
+					},
+					"remove": {
+						"grid": true,
+						"form": true
+					}
+				},
+				"cid": "B"
+			},
+			"Salesdtl": {
+				"temp": {
+					"newEntity": true
+				},
+				"title": "Sales Order Details",
+				"file": "PORTFDEMO/SALESDTL",
+				"primaryKey": [
+					"Orderref",
+					"Orderline"
+				],
+				"columns": {
+					"Orderref": {
+						"title": "Order Number",
+						"ccsid": 285,
+						"type": "char(6)"
+					},
+					"Orderline": {
+						"title": "Order Line Number",
+						"edtcde": "3",
+						"type": "decimal(3)"
+					},
+					"Prodref": {
+						"title": "Product Code",
+						"ccsid": 285,
+						"type": "char(20)"
+					},
+					"Warehse": {
+						"title": "Warehouse Code",
+						"ccsid": 285,
+						"type": "char(3)"
+					},
+					"Orderqty": {
+						"title": "Qty Ordered",
+						"edtcde": "L",
+						"type": "decimal(7)"
+					},
+					"Delryqty": {
+						"title": "Qty Allocated for De",
+						"edtcde": "L",
+						"type": "decimal(7)"
+					},
+					"Saletotal": {
+						"title": "Total Sale Price",
+						"edtcde": "J",
+						"type": "decimal(9, 2)"
+					}
+				},
+				"ui": {
+					"grids": {
+						"common": {
+							"columns": [
+								{
+									"name": "Orderline"
+								},
+								{
+									"name": "Prodref"
+								},
+								{
+									"name": "Proddesc1",
+									"from": "Prodmast"
+								},
+								{
+									"name": "Warehse"
+								},
+								{
+									"name": "Waredesc",
+									"from": "Waremast"
+								},
+								{
+									"name": "Orderqty"
+								},
+								{
+									"name": "Delryqty"
+								},
+								{
+									"name": "Saletotal"
+								}
+							]
+						}
+					},
+					"forms": {
+						"common": {
+							"name": "form",
+							"border": false,
+							"labelWidth": 150,
+							"defaults": {
+								"labelWidth": 150
+							},
+							"items": {
+								"portlet1": {
+									"position": {
+										"row": 1,
+										"column": 1
+									},
+									"title": "Detail",
+									"type": "portlet",
+									"columns": [
+										{
+											"name": "Orderref"
+										},
+										{
+											"name": "Orderline",
+											"disabled": true
+										},
+										{
+											"name": "Prodref"
+										},
+										{
+											"name": "Proddesc1",
+											"from": "Prodmast",
+											"disabled": true
+										},
+										{
+											"name": "Warehse"
+										},
+										{
+											"name": "Waredesc",
+											"from": "Waremast",
+											"disabled": true
+										},
+										{
+											"name": "Orderqty"
+										},
+										{
+											"name": "Delryqty"
+										},
+										{
+											"name": "Saletotal"
+										}
+									]
+								}
+							},
+							"columns": [
+								{
+									"name": "Orderref"
+								},
+								{
+									"name": "Orderline"
+								},
+								{
+									"name": "Prodref"
+								},
+								{
+									"name": "Proddesc1",
+									"from": "Prodmast"
+								},
+								{
+									"name": "Warehse"
+								},
+								{
+									"name": "Waredesc",
+									"from": "Waremast"
+								},
+								{
+									"name": "Orderqty"
+								},
+								{
+									"name": "Delryqty"
+								},
+								{
+									"name": "Saletotal"
+								}
+							]
+						}
+					}
+				},
+				"menuEntryPoint": false,
+				"designer": {
+					"x": 450,
+					"y": 160,
+					"width": 200,
+					"height": 133
+				},
+				"permission": {
+					"add": {
+						"form": true
+					},
+					"edit": {
+						"form": true,
+						"grid": false
+					},
+					"remove": {
+						"grid": true,
+						"form": true
+					}
+				},
+				"cid": "C"
+			},
+			"Saleshdr": {
+				"temp": {
+					"newEntity": true
+				},
+				"title": "Sales Order Header",
+				"file": "PORTFDEMO/SALESHDR",
+				"primaryKey": [
+					"Orderref"
+				],
+				"columns": {
+					"Orderref": {
+						"title": "Order Number",
+						"ccsid": 285,
+						"type": "char(6)"
+					},
+					"Custref": {
+						"title": "Customer Code",
+						"ccsid": 285,
+						"type": "char(10)"
+					},
+					"Orderdate": {
+						"title": "Order Date",
+						"uitype": "date",
+						"type": "date"
+					},
+					"Reqrddate": {
+						"title": "Required Date",
+						"uitype": "date",
+						"type": "date"
+					},
+					"Status": {
+						"title": "Status",
+						"type": "decimal(3)"
+					}
+				},
+				"ui": {
+					"grids": {
+						"common": {
+							"columns": [
+								{
+									"name": "Orderref"
+								},
+								{
+									"name": "Custref"
+								},
+								{
+									"name": "Name",
+									"from": "Custmast"
+								},
+								{
+									"name": "Orderdate"
+								},
+								{
+									"name": "Reqrddate"
+								},
+								{
+									"name": "Status"
+								}
+							]
+						}
+					},
+					"forms": {
+						"common": {
+							"name": "form",
+							"border": false,
+							"labelWidth": 150,
+							"defaults": {
+								"labelWidth": 150
+							},
+							"items": {
+								"Order": {
+									"position": {
+										"row": 1,
+										"column": 1
+									},
+									"title": "Order",
+									"type": "portlet",
+									"columns": [
+										{
+											"name": "Orderref",
+											"disabled": true
+										},
+										{
+											"name": "Orderdate"
+										},
+										{
+											"name": "Reqrddate"
+										},
+										{
+											"name": "Status"
+										}
+									]
+								},
+								"DeliveryAddress": {
+									"position": {
+										"row": 2,
+										"column": 1
+									},
+									"title": "Delivery address",
+									"type": "portlet",
+									"columns": [
+										{
+											"name": "Dlyaddr1",
+											"from": "Salesdly"
+										},
+										{
+											"name": "Dlyaddr2",
+											"from": "Salesdly"
+										},
+										{
+											"name": "Dlyaddr3",
+											"from": "Salesdly"
+										},
+										{
+											"name": "Dlyaddr4",
+											"from": "Salesdly"
+										},
+										{
+											"name": "Dlypost",
+											"from": "Salesdly"
+										}
+									]
+								},
+								"Customer": {
+									"position": {
+										"row": 1,
+										"column": 2
+									},
+									"title": "Customer",
+									"type": "portlet",
+									"columns": [
+										{
+											"name": "Custref",
+											"disabled": true
+										},
+										{
+											"name": "Name",
+											"from": "Custmast",
+											"disabled": false
+										},
+										{
+											"name": "Contact",
+											"from": "Custmast"
+										},
+										{
+											"name": "Address1",
+											"from": "Custmast"
+										},
+										{
+											"name": "Address2",
+											"from": "Custmast",
+											"disabled": false
+										},
+										{
+											"name": "Address3",
+											"from": "Custmast"
+										},
+										{
+											"name": "Address4",
+											"from": "Custmast"
+										},
+										{
+											"name": "Postcode",
+											"from": "Custmast",
+											"disabled": false
+										}
+									]
+								}
+							},
+							"columns": [
+								{
+									"name": "Orderref"
+								},
+								{
+									"name": "Orderdate"
+								},
+								{
+									"name": "Reqrddate"
+								},
+								{
+									"name": "Status"
+								},
+								{
+									"name": "Dlyaddr1",
+									"from": "Salesdly"
+								},
+								{
+									"name": "Dlyaddr2",
+									"from": "Salesdly"
+								},
+								{
+									"name": "Dlyaddr3",
+									"from": "Salesdly"
+								},
+								{
+									"name": "Dlyaddr4",
+									"from": "Salesdly"
+								},
+								{
+									"name": "Dlypost",
+									"from": "Salesdly"
+								},
+								{
+									"name": "Custref"
+								},
+								{
+									"name": "Name",
+									"from": "Custmast"
+								},
+								{
+									"name": "Contact",
+									"from": "Custmast"
+								},
+								{
+									"name": "Address1",
+									"from": "Custmast"
+								},
+								{
+									"name": "Address2",
+									"from": "Custmast"
+								},
+								{
+									"name": "Address3",
+									"from": "Custmast"
+								},
+								{
+									"name": "Address4",
+									"from": "Custmast"
+								},
+								{
+									"name": "Postcode",
+									"from": "Custmast"
+								}
+							]
+						}
+					}
+				},
+				"menuEntryPoint": true,
+				"designer": {
+					"x": 450,
+					"y": 10,
+					"width": 200,
+					"height": 133
+				},
+				"permission": {
+					"add": {
+						"form": true
+					},
+					"edit": {
+						"form": true,
+						"grid": false
+					},
+					"remove": {
+						"grid": true,
+						"form": true
+					}
+				},
+				"cid": "D"
+			},
+			"Custmast": {
+				"xxx_hook":"ip2hooks.testhook",
+				"title": "Customer Master",
+				"file": "PORTFDEMO/CUSTMAST",
+				"primaryKey": [
+					"Custref"
+				],
+				"columns": {
+					"Custref": {
+						"title": "Customer Code",
+						"ccsid": 285,
+						"type": "char(10)"
+					},
+					"Name": {
+						"title": "Customer Name",
+						"ccsid": 285,
+						"uitype": "searchField",
+						"isTitle": true,
+						"type": "char(50)"
+					},
+					"Shortname": {
+						"title": "Customer Short Name",
+						"ccsid": 285,
+						"type": "char(10)"
+					},
+					"Address1": {
+						"title": "Address Line 1",
+						"ccsid": 285,
+						"isTitle": true,
+						"type": "char(49)"
+					},
+					"Address2": {
+						"title": "Address Line 2",
+						"ccsid": 285,
+						"isTitle": true,
+						"type": "char(40)"
+					},
+					"Address3": {
+						"title": "Address Line 3",
+						"ccsid": 285,
+						"type": "char(40)"
+					},
+					"Address4": {
+						"title": "Address Line 4",
+						"ccsid": 285,
+						"type": "char(40)"
+					},
+					"Postcode": {
+						"title": "Postcode",
+						"ccsid": 285,
+						"isTitle": true,
+						"type": "char(10)"
+					},
+					"Credlmt": {
+						"title": "Credit Limit",
+						"edtcde": "J",
+						"type": "decimal(9)"
+					},
+					"Phone": {
+						"title": "Phone Number",
+						"ccsid": 285,
+						"type": "char(20)"
+					},
+					"Website": {
+						"title": "Website Address",
+						"ccsid": 285,
+						"type": "char(50)"
+					},
+					"Contact": {
+						"title": "Customer Contact Nam",
+						"ccsid": 285,
+						"type": "char(40)"
+					}
+				},
+				"ui": {
+					"grids": {
+						"common": {
+							"columns": [
+								{
+									"name": "Custref"
+								},
+								{
+									"name": "Name"
+								},
+								{
+									"name": "Shortname"
+								},
+								{
+									"name": "Address1"
+								},
+								{
+									"name": "Address2"
+								},
+								{
+									"name": "Address3"
+								},
+								{
+									"name": "Address4"
+								},
+								{
+									"name": "Postcode"
+								},
+								{
+									"name": "Credlmt"
+								},
+								{
+									"name": "Phone"
+								},
+								{
+									"name": "Website"
+								},
+								{
+									"name": "Contact"
+								}
+							]
+						}
+					},
+					"forms": {
+						"common": {
+							"name": "form",
+							"border": false,
+							"labelWidth": 150,
+							"defaults": {
+								"labelWidth": 150
+							},
+							"layout": {
+								"Bing": {
+									"renderAs": "tab"
+								},
+								"Map": {
+									"renderAs": "portlet",
+									"position": {
+										"row": 1,
+										"column": 2
+									}
+								},
+								"Saleshdr": {
+									"renderAs": "childtab"
+								},
+								"Stats": {
+									"renderAs": "childtab"
+								}
+							},
+							"columns": [
+								{
+									"name": "Custref"
+								},
+								{
+									"name": "Name"
+								},
+								{
+									"name": "Shortname"
+								},
+								{
+									"name": "Balance",
+									"from": "Custbal"
+								},
+								{
+									"name": "Aged30",
+									"from": "Custbal"
+								},
+								{
+									"name": "Aged60",
+									"from": "Custbal"
+								},
+								{
+									"name": "Aged90",
+									"from": "Custbal"
+								},
+								{
+									"name": "Aged120",
+									"from": "Custbal"
+								},
+								{
+									"name": "Contact"
+								},
+								{
+									"name": "Credlmt"
+								},
+								{
+									"name": "Website"
+								},
+								{
+									"name": "Phone"
+								},
+								{
+									"name": "Address1"
+								},
+								{
+									"name": "Address2"
+								},
+								{
+									"name": "Address3"
+								},
+								{
+									"name": "Address4"
+								},
+								{
+									"name": "Postcode"
+								}
+							],
+							"items": {
+								"portlet1": {
+									"position": {
+										"row": 1,
+										"column": 1
+									},
+									"title": "Name",
+									"type": "portlet",
+									"columns": [
+										{
+											"name": "Custref"
+										},
+										{
+											"name": "Name"
+										},
+										{
+											"name": "Shortname",
+											"disabled": false
+										}
+									]
+								},
+								"portlet2": {
+									"position": {
+										"row": 2,
+										"column": 1
+									},
+									"title": "Balance",
+									"type": "portlet",
+									"columns": [
+										{
+											"name": "Balance",
+											"from": "Custbal"
+										},
+										{
+											"name": "Aged30",
+											"from": "Custbal",
+											"disabled": false
+										},
+										{
+											"name": "Aged60",
+											"from": "Custbal",
+											"disabled": false
+										},
+										{
+											"name": "Aged90",
+											"from": "Custbal"
+										},
+										{
+											"name": "Aged120",
+											"from": "Custbal",
+											"disabled": false
+										}
+									]
+								},
+								"portlet3": {
+									"position": {
+										"row": 2,
+										"column": 2
+									},
+									"title": "Contact",
+									"type": "portlet",
+									"columns": [
+										{
+											"name": "Contact"
+										},
+										{
+											"name": "Credlmt"
+										},
+										{
+											"name": "Website"
+										},
+										{
+											"name": "Phone"
+										}
+									]
+								},
+								"portlet4": {
+									"position": {
+										"row": 1,
+										"column": 3
+									},
+									"title": "Address",
+									"type": "portlet",
+									"columns": [
+										{
+											"name": "Address1"
+										},
+										{
+											"name": "Address2"
+										},
+										{
+											"name": "Address3"
+										},
+										{
+											"name": "Address4"
+										},
+										{
+											"name": "Postcode"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"menuEntryPoint": true,
+				"designer": {
+					"x": 230,
+					"y": 10,
+					"width": 200,
+					"height": 133
+				},
+				"permission": {
+					"add": {
+						"form": true
+					},
+					"edit": {
+						"form": true,
+						"grid": false
+					},
+					"remove": {
+						"grid": true,
+						"form": true
+					}
+				},
+				"affiliations": {
+					"Bing": {
+						"title": "Search the net",
+						"url": "'http://www.bing.com/search?q=' CONCAT urlencode(name)",
+						"renderAs": "fulltab"
+					},
+					"Map": {
+						"title": "Map",
+						"url": "'http://www.icebreak.org/geoCoding.html?address='  CONCAT name CONCAT ',' CONCAT address1 CONCAT ',' CONCAT postcode",
+						"renderAs": "portlet",
+						"position": {
+							"row": 1,
+							"column": 2
+						},
+						"cls": "affiliation"
+					}
+				},
+				"widgets": {},
+				"cid": "E"
+			},
+			"Stocklvl": {
+				"temp": {
+					"newEntity": true
+				},
+				"title": "Stock Levels",
+				"file": "PORTFDEMO/STOCKLVL",
+				"primaryKey": [
+					"Prodref",
+					"Warehse"
+				],
+				"columns": {
+					"Prodref": {
+						"title": "Product Code",
+						"ccsid": 285,
+						"type": "char(20)"
+					},
+					"Warehse": {
+						"title": "Warehouse Code",
+						"ccsid": 285,
+						"type": "char(3)"
+					},
+					"Stockqty": {
+						"title": "Qty In Stock",
+						"edtcde": "L",
+						"type": "decimal(7)"
+					},
+					"Allocqty": {
+						"title": "Qty Allocated",
+						"edtcde": "L",
+						"type": "decimal(7)"
+					},
+					"Purchqty": {
+						"title": "Qty on Purchase Orde",
+						"edtcde": "L",
+						"type": "decimal(7)"
+					}
+				},
+				"ui": {
+					"grids": {
+						"common": {
+							"columns": [
+								{
+									"name": "Prodref"
+								},
+								{
+									"name": "Proddesc1",
+									"from": "Prodmast"
+								},
+								{
+									"name": "Warehse"
+								},
+								{
+									"name": "Waredesc",
+									"from": "Waremast"
+								},
+								{
+									"name": "Stockqty"
+								},
+								{
+									"name": "Allocqty"
+								},
+								{
+									"name": "Purchqty"
+								}
+							]
+						}
+					},
+					"forms": {
+						"common": {
+							"name": "form",
+							"border": false,
+							"labelWidth": 150,
+							"defaults": {
+								"labelWidth": 150
+							},
+							"items": {
+								"portlet1": {
+									"position": {
+										"row": 1,
+										"column": 1
+									},
+									"title": "Product Code",
+									"type": "portlet",
+									"columns": [
+										{
+											"name": "Prodref"
+										},
+										{
+											"name": "Warehse"
+										},
+										{
+											"name": "Stockqty"
+										},
+										{
+											"name": "Allocqty"
+										},
+										{
+											"name": "Purchqty"
+										}
+									]
+								}
+							},
+							"columns": [
+								{
+									"name": "Prodref"
+								},
+								{
+									"name": "Warehse"
+								},
+								{
+									"name": "Stockqty"
+								},
+								{
+									"name": "Allocqty"
+								},
+								{
+									"name": "Purchqty"
+								}
+							]
+						}
+					}
+				},
+				"menuEntryPoint": true,
+				"designer": {
+					"x": 670,
+					"y": 310,
+					"width": 200,
+					"height": 133
+				},
+				"permission": {
+					"add": {
+						"form": true
+					},
+					"edit": {
+						"form": true,
+						"grid": false
+					},
+					"remove": {
+						"grid": true,
+						"form": true
+					}
+				},
+				"keys": [],
+				"cid": "F"
+			},
+			"Stats": {
+				"temp": {
+					"newEntity": true
+				},
+				"title": "Sales Statistics",
+				"file": "PORTFDEMO/STATS",
+				"primaryKey": [
+					"Custref",
+					"Prodref"
+				],
+				"columns": {
+					"Custref": {
+						"title": "Customer Code",
+						"ccsid": 285,
+						"type": "char(10)"
+					},
+					"Prodref": {
+						"title": "Product Code",
+						"ccsid": 285,
+						"type": "char(20)"
+					},
+					"Salesytd": {
+						"title": "Sales YTD",
+						"edtcde": "J",
+						"type": "decimal(9, 2)"
+					},
+					"Salesqtr": {
+						"title": "Sales Current Qtr",
+						"edtcde": "J",
+						"type": "decimal(9, 2)"
+					},
+					"Salesmth": {
+						"title": "Sales Current Mth",
+						"edtcde": "J",
+						"type": "decimal(9, 2)"
+					}
+				},
+				"ui": {
+					"grids": {
+						"common": {
+							"columns": [
+								{
+									"name": "Custref"
+								},
+								{
+									"name": "Prodref"
+								},
+								{
+									"name": "Salesytd"
+								},
+								{
+									"name": "Salesqtr"
+								},
+								{
+									"name": "Salesmth"
+								}
+							]
+						}
+					},
+					"forms": {
+						"common": {
+							"name": "form",
+							"border": false,
+							"labelWidth": 150,
+							"defaults": {
+								"labelWidth": 150
+							},
+							"items": {
+								"portlet1": {
+									"position": {
+										"row": 1,
+										"column": 1
+									},
+									"title": "Customer Code",
+									"type": "portlet",
+									"columns": [
+										{
+											"name": "Custref"
+										},
+										{
+											"name": "Prodref"
+										},
+										{
+											"name": "Salesytd"
+										},
+										{
+											"name": "Salesqtr"
+										},
+										{
+											"name": "Salesmth"
+										}
+									]
+								}
+							},
+							"columns": [
+								{
+									"name": "Custref"
+								},
+								{
+									"name": "Prodref"
+								},
+								{
+									"name": "Salesytd"
+								},
+								{
+									"name": "Salesqtr"
+								},
+								{
+									"name": "Salesmth"
+								}
+							]
+						}
+					}
+				},
+				"menuEntryPoint": false,
+				"designer": {
+					"x": 230,
+					"y": 310,
+					"width": 200,
+					"height": 133
+				},
+				"permission": {
+					"add": {
+						"form": true
+					},
+					"edit": {
+						"form": true,
+						"grid": false
+					},
+					"remove": {
+						"grid": true,
+						"form": true
+					}
+				},
+				"cid": "G"
+			},
+			"Prodmast": {
+				"temp": {
+					"newEntity": true
+				},
+				"title": "{\"en\":\"Product Master\",\"da\":\"Prdukt register\"}",
+				"file": "PORTFDEMO/PRODMAST",
+				"primaryKey": [
+					"Prodref"
+				],
+				"columns": {
+					"Prodref": {
+						"title": "Product Code",
+						"ccsid": 285,
+						"type": "char(20)"
+					},
+					"Proddesc1": {
+						"title": "Product Description",
+						"ccsid": 285,
+						"type": "char(40)"
+					},
+					"Proddesc2": {
+						"title": "Product Description",
+						"ccsid": 285,
+						"type": "char(40)"
+					},
+					"Saleprice": {
+						"title": "Retail Price",
+						"edtcde": "J",
+						"type": "decimal(7, 2)"
+					},
+					"Costprice": {
+						"title": "Cost Price",
+						"edtcde": "J",
+						"type": "decimal(7, 2)"
+					},
+					"Image": {
+						"title": "Link to Product Imag",
+						"ccsid": 285,
+						"type": "char(50)"
+					},
+					"Spec": {
+						"title": "Link to Product Spec",
+						"ccsid": 285,
+						"type": "char(50)"
+					}
+				},
+				"ui": {
+					"grids": {
+						"common": {
+							"columns": [
+								{
+									"name": "Prodref"
+								},
+								{
+									"name": "Proddesc1"
+								},
+								{
+									"name": "Proddesc2"
+								},
+								{
+									"name": "Saleprice"
+								},
+								{
+									"name": "Costprice"
+								},
+								{
+									"name": "Image"
+								},
+								{
+									"name": "Spec"
+								}
+							]
+						}
+					},
+					"forms": {
+						"common": {
+							"name": "form",
+							"border": false,
+							"labelWidth": 150,
+							"defaults": {
+								"labelWidth": 150
+							},
+							"columns": [
+								{
+									"name": "Prodref"
+								},
+								{
+									"name": "Proddesc1"
+								},
+								{
+									"name": "Proddesc2"
+								},
+								{
+									"name": "Saleprice"
+								},
+								{
+									"name": "Costprice"
+								},
+								{
+									"name": "Image"
+								},
+								{
+									"name": "Spec"
+								}
+							],
+							"items": {
+								"portlet1": {
+									"position": {
+										"row": 1,
+										"column": 1
+									},
+									"title": "Detail",
+									"type": "portlet",
+									"columns": [
+										{
+											"name": "Prodref",
+											"disabled": true
+										},
+										{
+											"name": "Proddesc1"
+										},
+										{
+											"name": "Proddesc2"
+										},
+										{
+											"name": "Saleprice"
+										},
+										{
+											"name": "Costprice"
+										},
+										{
+											"name": "Image"
+										},
+										{
+											"name": "Spec"
+										}
+									]
+								}
+							}
+						}
+					}
+				},
+				"menuEntryPoint": true,
+				"designer": {
+					"x": 450,
+					"y": 310,
+					"width": 200,
+					"height": 133
+				},
+				"permission": {
+					"add": {
+						"form": true
+					},
+					"edit": {
+						"form": true,
+						"grid": false
+					},
+					"remove": {
+						"grid": true,
+						"form": true
+					}
+				},
+				"cid": "H",
+				"widgets": {}
+			},
+			"Waremast": {
+				"temp": {
+					"newEntity": true
+				},
+				"title": "Warehouse Master",
+				"file": "PORTFDEMO/WAREMAST",
+				"primaryKey": [
+					"Warehse"
+				],
+				"columns": {
+					"Warehse": {
+						"title": "Warehouse Code",
+						"ccsid": 285,
+						"type": "char(3)"
+					},
+					"Waredesc": {
+						"title": "Warehouse Descriptio",
+						"ccsid": 285,
+						"type": "char(40)"
+					}
+				},
+				"ui": {
+					"grids": {
+						"common": {
+							"columns": [
+								{
+									"name": "Warehse"
+								},
+								{
+									"name": "Waredesc"
+								}
+							]
+						}
+					},
+					"forms": {
+						"common": {
+							"name": "form",
+							"border": false,
+							"labelWidth": 150,
+							"defaults": {
+								"labelWidth": 150
+							},
+							"items": {
+								"portlet1": {
+									"position": {
+										"row": 1,
+										"column": 1
+									},
+									"title": "Warehouse Code",
+									"type": "portlet",
+									"columns": [
+										{
+											"name": "Warehse",
+											"left": 16,
+											"top": 2,
+											"newNumber": {},
+											"labelWidth": 150
+										},
+										{
+											"name": "Waredesc",
+											"left": 16,
+											"top": 27,
+											"width": 445,
+											"height": 21,
+											"newNumber": 200,
+											"labelWidthnewNumber": 200,
+											"labelWidth": 150
+										}
+									]
+								}
+							},
+							"columns": [
+								{
+									"name": "Warehse"
+								},
+								{
+									"name": "Waredesc"
+								}
+							]
+						}
+					}
+				},
+				"menuEntryPoint": true,
+				"designer": {
+					"x": 890,
+					"y": 310,
+					"width": 200,
+					"height": 133
+				},
+				"permission": {
+					"add": {
+						"form": true
+					},
+					"edit": {
+						"grid": true,
+						"form": true
+					},
+					"remove": {
+						"grid": true,
+						"form": true
+					}
+				},
+				"cid": "I"
+			}
+		},
+		"languages": {
+			"da": {
+				"text": {
+					"aged 120+ days": "Over 120 dage",
+					"aged 30 days": "Over 30 dage",
+					"aged 60 days": "Over 60 dage",
+					"aged 90 days": "Over 90 dage",
+					"customer master": "Kunde master",
+					"portfolio demo": "Portfolio Demo",
+					"product master": "Prdukt register",
+					"product code": "Produkt Kode"
+				}
+			},
+			"en": {
+				"text": {
+					"customer master": "Customer master",
+					"product master": "Product Master",
+					"product code": "Product Code"
+				}
+			}
+		},
+		"relations": [
+			{
+				"between": {
+					"entity": "Saleshdr",
+					"on": [
+						{
+							"name": "Orderref"
+						}
+					],
+					"occurrence": "one"
+				},
+				"and": {
+					"entity": "Salesdly",
+					"on": [
+						{
+							"name": "Orderref"
+						}
+					],
+					"occurrence": "one"
+				},
+				"properties": {
+					"shownAsChild": {
+						"between": false,
+						"and": false
+					},
+					"cid": "J"
+				}
+			},
+			{
+				"between": {
+					"entity": "Saleshdr",
+					"on": [
+						{
+							"name": "Orderref"
+						}
+					],
+					"occurrence": "one"
+				},
+				"and": {
+					"entity": "Salesdtl",
+					"on": [
+						{
+							"name": "Orderref"
+						}
+					],
+					"occurrence": "many"
+				},
+				"properties": {
+					"shownAsChild": {
+						"between": true,
+						"and": false
+					},
+					"cid": "K"
+				}
+			},
+			{
+				"between": {
+					"entity": "Salesdtl",
+					"on": [
+						{
+							"name": "Warehse"
+						}
+					],
+					"occurrence": "one"
+				},
+				"and": {
+					"entity": "Waremast",
+					"on": [
+						{
+							"name": "Warehse"
+						}
+					],
+					"occurrence": "one"
+				},
+				"properties": {
+					"shownAsChild": {
+						"between": false,
+						"and": true
+					},
+					"cid": "L"
+				}
+			},
+			{
+				"between": {
+					"entity": "Stocklvl",
+					"on": [
+						{
+							"name": "Warehse"
+						}
+					],
+					"occurrence": "many"
+				},
+				"and": {
+					"entity": "Waremast",
+					"on": [
+						{
+							"name": "Warehse"
+						}
+					],
+					"occurrence": "one"
+				},
+				"properties": {
+					"shownAsChild": {
+						"between": false,
+						"and": true
+					},
+					"cid": "M"
+				}
+			},
+			{
+				"between": {
+					"entity": "Custmast",
+					"on": [
+						{
+							"name": "Custref"
+						}
+					],
+					"occurrence": "one"
+				},
+				"and": {
+					"entity": "Custbal",
+					"on": [
+						{
+							"name": "Custref"
+						}
+					],
+					"occurrence": "one"
+				},
+				"properties": {
+					"shownAsChild": {
+						"between": false,
+						"and": false
+					},
+					"cid": "N"
+				}
+			},
+			{
+				"between": {
+					"entity": "Custmast",
+					"on": [
+						{
+							"name": "Custref"
+						}
+					],
+					"occurrence": "one"
+				},
+				"and": {
+					"entity": "Saleshdr",
+					"on": [
+						{
+							"name": "Custref"
+						}
+					],
+					"occurrence": "many"
+				},
+				"properties": {
+					"shownAsChild": {
+						"between": true,
+						"and": false
+					},
+					"cid": "O"
+				}
+			},
+			{
+				"between": {
+					"entity": "Custmast",
+					"on": [
+						{
+							"name": "Custref"
+						}
+					],
+					"occurrence": "many"
+				},
+				"and": {
+					"entity": "Stats",
+					"on": [
+						{
+							"name": "Custref"
+						}
+					],
+					"occurrence": "one"
+				},
+				"properties": {
+					"shownAsChild": {
+						"between": true,
+						"and": true
+					},
+					"cid": "P"
+				}
+			},
+			{
+				"between": {
+					"entity": "Salesdtl",
+					"on": [
+						{
+							"name": "Prodref"
+						}
+					],
+					"occurrence": "one"
+				},
+				"and": {
+					"entity": "Prodmast",
+					"on": [
+						{
+							"name": "Prodref"
+						}
+					],
+					"occurrence": "one"
+				},
+				"properties": {
+					"shownAsChild": {
+						"between": false,
+						"and": false
+					},
+					"cid": "Q"
+				}
+			},
+			{
+				"between": {
+					"entity": "Prodmast",
+					"on": [
+						{
+							"name": "Prodref"
+						}
+					],
+					"occurrence": "many"
+				},
+				"and": {
+					"entity": "Stats",
+					"on": [
+						{
+							"name": "Prodref"
+						}
+					],
+					"occurrence": "one"
+				},
+				"properties": {
+					"shownAsChild": {
+						"between": false,
+						"and": false
+					},
+					"cid": "R"
+				}
+			},
+			{
+				"between": {
+					"entity": "Prodmast",
+					"on": [
+						{
+							"name": "Prodref"
+						}
+					],
+					"occurrence": "one"
+				},
+				"and": {
+					"entity": "Stocklvl",
+					"on": [
+						{
+							"name": "Prodref"
+						}
+					],
+					"occurrence": "many"
+				},
+				"properties": {
+					"shownAsChild": {
+						"between": true,
+						"and": false
+					},
+					"cid": "S"
+				}
+			}
+		],
+		"menu": [
+			{
+				"type": "entity",
+				"entity": "Custmast"
+			},
+			{
+				"type": "entity",
+				"entity": "Prodmast"
+			},
+			{
+				"type": "entity",
+				"entity": "Saleshdr"
+			},
+			{
+				"type": "entity",
+				"entity": "Waremast"
+			},
+			{
+				"type": "entity",
+				"entity": "Stocklvl"
+			},
+			{
+				"type": "dmd",
+				"title": "Domain Model Designer"
+			},
+			{
+				"type": "link",
+				"url": "http://www.system-metode.dk",
+				"title": "System & Metode",
+				"icon": "/system/images/icons/16x16/link.png"
+			}
+		],
+		"navigator": {
+			"system": 5,
+			"rrn": 17,
+			"applicationGroup": 6
+		},
+		"API": {
+			"eventHandler": "ip2dmdProxy.aspx"
+		},
+		"name": "portfdemo",
+		"title": "{\"da\":\"Portfolio Demo\",\"en\":\"\"}",
+		"types": {},
+		"designer": {
+			"slider": 200
+		}
+	}
+}
