@@ -45,8 +45,9 @@ public class UserController implements ResourceProcessor<RepositoryLinksResource
 	@Override
 	public RepositoryLinksResource process(RepositoryLinksResource resource) {
 		resource.add(linkTo(UserController.class).slash("/$id").withRel("users"));
-		resource.add(linkTo(UserController.class).slash("?search=").withRel("users"));
-		resource.add(linkTo(UserController.class).slash("/proclist?search=").withRel("users"));
+		resource.add(linkTo(UserController.class).slash("").withRel("users"));
+		resource.add(linkTo(UserController.class).slash("/listbyview?search=").withRel("users"));
+		resource.add(linkTo(UserController.class).slash("/listbyprocedure?search=").withRel("users"));
 		return resource;
 	}
 
